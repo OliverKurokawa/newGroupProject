@@ -69,7 +69,7 @@ module.exports.processLoginPage = (req, res, next) => {
             }
 
 
-            return res.redirect('/business-contact-list');
+            return res.redirect('/tournmentlist');
         });
     })(req, res, next);
 }
@@ -86,7 +86,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
     }
     else
     {
-        return res.redirect('/business-contact-list');
+        return res.redirect('/tournmentlist');
     }
 }
 
@@ -119,7 +119,7 @@ module.exports.processRegisterPage = (req, res, next) => {
         else
         {
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/business-contact-list')
+                res.redirect('/tournmentlist')
             });
         }
     });
